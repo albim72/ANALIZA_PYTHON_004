@@ -43,3 +43,26 @@ def multi(n):
 print(multi(8)(4))
 
 num = [67,5,12,-6,0,9,133,78,99,-45,2,7,9,88,12,34,7]
+
+nbparz = list(filter(lambda x:x%2==0,num))
+print(nbparz)
+
+cube = list(map(lambda x:x**3,num))
+print(cube)
+
+def tofive(n):
+    return n+5
+
+five = list(map(tofive,num))
+print(five)
+
+kwadraty = [i**2 for i in range(1,1000001)] #list comprehension -> funkcja anonimowa jednolinijkowa
+print(sum(kwadraty))
+
+imie = "Henio"
+wynikT = "Lider"
+wynikN = "uczestnik"
+
+w = wynikT if imie=="Jan" else wynikN
+
+print(w)
