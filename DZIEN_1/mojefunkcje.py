@@ -66,3 +66,17 @@ wynikN = "uczestnik"
 w = wynikT if imie=="Jan" else wynikN
 
 print(w)
+
+#przypadek 4
+
+def witaj(imie):
+    return f"Miło Cię widzieć {imie}"
+
+def konkurs(imie,punkty):
+    return f"uczetnik konkursu: {imie}, liczba punktów: {punkty}"
+
+def osoba(funkcja,*args):
+    return funkcja(*args)
+
+print(osoba(witaj,"Leon"))
+print(osoba(konkurs,"Olga",46))
