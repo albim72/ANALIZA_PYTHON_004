@@ -25,3 +25,21 @@ def rank(*lang,nrrank,**inne):
 
 rank("Python","Java","C#",nrrank=55)
 rank("Python","C++","Java","JavaScript","C#",nrrank=88)
+
+
+#przypadek 3 -> funkcje anonimowe - funkcja lambda
+
+print((lambda d:d+99)(4))
+print((lambda d,k:d+99-k)(4,3))
+
+g = lambda a,b,c=8:(a+b)/c
+
+print(g(4,1,2))
+print(g(4,1))
+
+def multi(n):
+    return lambda a:a*n
+
+print(multi(8)(4))
+
+num = [67,5,12,-6,0,9,133,78,99,-45,2,7,9,88,12,34,7]
