@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "imie":"Roman",
+  "nazwisko":"Kot",
+  "wiek": 50,
+  "liczba punktów": [101,67,88,99]
+}
