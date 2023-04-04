@@ -29,3 +29,18 @@ colors = [
     '#bcbd22',
     '#17becf',
 ]
+
+mpl.rcParams['axes.prop_cycle'] = cycler(markevery=cases,color=colors)
+x = np.linspace(0,2*np.pi)
+offsets = np.linspace(0,2*np.pi,11,endpoint=False)
+yy = np.transpose([np.sin(x+phi) for phi in offsets])
+
+fig = plt.figure()
+ax = fig.add_axes([0.1,0.1,0.6,0.75])
+
+for i in range(len(cases)):
+    ax.plot(yy[:,i],marker='o',label=str(cases[i]))
+    ax.legend(bbox_to_anchor=(1.05,1), loc="upper left", borderaxespad = 0.)
+
+plt.title('wyświetlenie grupy wykresów cyklicznych...')
+plt.show()
